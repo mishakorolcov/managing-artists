@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-let LinkinSchema = new Schema({
+let LinkinParkSchema = new Schema({
     name: String,
     surname: String,
     group: String,
@@ -9,5 +9,5 @@ let LinkinSchema = new Schema({
 
 });
 
-let LinkinModel = mongoose.model('Linkin', LinkinSchema);
-module.exports = LinkinModel;
+
+module.exports = mongoose.model('LinkinPark', LinkinParkSchema);

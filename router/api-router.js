@@ -1,9 +1,11 @@
-let KinoRouter = require('./kino-router');
-let ParkRouter = require('./link Park-router');
+let router = require('express').Router();
 
-let ApiRouter = require('express').Router();
+let artistRouter = require('./artistRouter');
+let parkRouter = require('./linkinParkRouter');
+let bandsRouter = require('./bandsRouter');
 
-ApiRouter.use(KinoRouter);
-ApiRouter.use(ParkRouter);
+router.use('/artist', artistRouter);
+router.use('/linkinPark', parkRouter);
+router.use('/bands', bandsRouter);
 
-module.exports = ApiRouter;
+module.exports = router;
