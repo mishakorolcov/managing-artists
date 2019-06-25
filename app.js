@@ -1,7 +1,7 @@
 let express = require('express');
 let mongoose = require('mongoose');
 let app = express();
-mongoose.connect('mongodb://localhost:27017/task', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/task1', {useNewUrlParser: true});
 let apiRouter = require('./router/api-router');
 
 app.use(express.urlencoded({extended: true}));
